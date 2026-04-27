@@ -417,27 +417,23 @@
                 </div>
 
                 <!-- Isometric Map Simulation -->
-                <div class="w-full h-64 mt-4 relative flex justify-center items-center overflow-hidden">
-                    <div class="relative w-72 h-44">
-                        <!-- Floor (isometric by skew/rotation on desktop-safe transforms) -->
-                        <div class="absolute inset-0 bg-white border border-gray-200 rounded-3xl shadow-sm transform rotate-6 -skew-x-6"></div>
-                        
-                        <!-- Platform Area -->
-                        <div class="absolute top-12 left-24 w-28 h-20 bg-[#F5F0FF] border-2 border-[#6B2FBA] border-dashed rounded-xl flex justify-center items-center transform rotate-6 -skew-x-6">
-                            <span class="text-[#6B2FBA] font-semibold text-xl">18</span>
-                        </div>
-                        
-                        <!-- Bus Simulation (animated) -->
-                        <div class="absolute top-20 left-2 w-32 h-7 bg-[#3D1A6B] rounded-md shadow-lg transform rotate-6 -skew-x-6 transition-transform duration-1000 animate-pulse"></div>
+                <div class="px-6 mt-4 flex flex-col gap-6">
+                    <div class="self-end bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm flex items-center gap-2 text-xs font-medium">
+                        <span class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></span> Ônibus estacionando
                     </div>
 
-                    <!-- Floating Status -->
-                    <div class="absolute top-4 right-6 bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm flex items-center gap-2 text-xs font-medium">
-                        <span class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></span> Ônibus estacionando
+                    <div class="relative w-full h-44">
+                        <!-- Floor -->
+                        <div class="absolute inset-0 bg-white border border-gray-200 rounded-3xl shadow-sm"></div>
+
+                        <!-- Platform Area -->
+                        <div class="absolute top-1/2 left-1/2 w-28 h-20 bg-[#F5F0FF] border-2 border-[#6B2FBA] border-dashed rounded-xl flex justify-center items-center transform -translate-x-1/2 -translate-y-1/2">
+                            <span class="text-[#6B2FBA] font-semibold text-xl">18</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="px-6 -mt-8 relative z-10">
+                <div class="px-6 mt-6 relative z-10">
                     <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-50 mb-6">
                         <h3 class="text-sm font-semibold tracking-tight mb-4">Serviços Próximos</h3>
                         <div class="space-y-4">
@@ -469,7 +465,7 @@
                         Embarque Facial
                     </button>
                     <button onclick="navTo('screen-nfc')" class="w-full mt-3 bg-white text-[#1A0B2E] border border-gray-200 py-4 rounded-2xl font-semibold text-sm flex justify-center items-center gap-2 active:scale-95 transition-transform shadow-sm">
-                        <iconify-icon icon="solar:smartphone-nfc-linear" width="22"></iconify-icon>
+                        <iconify-icon icon="solar:smartphone-linear" width="22"></iconify-icon>
                         Embarque por NFC
                     </button>
                     <p class="text-center text-[10px] text-gray-500 mt-3">Escolha facial ou NFC para embarcar sem bilhete impresso.</p>
@@ -488,7 +484,7 @@
                 <div class="px-6 mt-6">
                     <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 text-center">
                         <div class="w-24 h-24 mx-auto rounded-full bg-[#F5F0FF] flex items-center justify-center text-[#6B2FBA] relative animate-pulse-ring">
-                            <iconify-icon icon="solar:smartphone-nfc-linear" width="44"></iconify-icon>
+                            <iconify-icon icon="solar:smartphone-linear" width="44"></iconify-icon>
                         </div>
                         <h2 class="text-lg font-semibold tracking-tight mt-5">Aproxime o celular do totem</h2>
                         <p class="text-xs text-gray-500 mt-2">Mantenha o NFC ativo e encoste o topo do aparelho no leitor indicado.</p>
